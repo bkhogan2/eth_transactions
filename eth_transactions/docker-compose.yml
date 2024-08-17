@@ -8,6 +8,10 @@ services:
       - .:/app
     ports:
       - "8000:8000"
+    environment:
+      - ADMIN_USERNAME=admin
+      - ADMIN_PASSWORD=admin
+      - ADMIN_EMAIL=admin@example.com
     depends_on:
       - db
 
