@@ -36,6 +36,13 @@ A Django application for importing, storing, and managing Ethereum transactions.
 3. **Access the Django application**:
     Open your web browser and go to `http://localhost:8000`.
 
+### Loading the CSV
+1. navigate to the eth_transactions directory containing manage.py
+2. run the load_csv management command
+    ```bash
+    python manage.py load_csv /path/to/your/csv
+    ```
+
 ### Stopping the Application
 
 1. **Stop the running containers**:
