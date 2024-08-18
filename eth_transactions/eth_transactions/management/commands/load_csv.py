@@ -8,7 +8,13 @@ class Command(BaseCommand):
     help = "Load ethereum transaction data from a CSV file into the Transaction model"
 
     def add_arguments(self, parser):
-        parser.add_argument('filepath', type=str, help='The file path to the CSV file')
+        parser.add_argument(
+            'filepath',
+            nargs='?',
+            default='/app/eth_transactions/data/parse_me.csv',
+            type=str,
+            help='Path to the CSV file'
+        )
     
     def handle(self, *args, **kwargs):
         filepath = kwargs['filepath']
