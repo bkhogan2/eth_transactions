@@ -25,23 +25,35 @@ A Django application for importing, storing, and managing Ethereum transactions.
 
     Then navigate to the project directory:
     ```bash
-    cd eth_transactions
+    cd eth_transactions/eth_transactions
     ```
 
 2. **Build and start the Docker containers**:
     ```bash
-    docker-compose up -d
+    docker compose up -d
     ```
 
 3. **Access the Django application**:
-    Open your web browser and go to `http://localhost:8000`.
+    Open your web browser and go to `http://localhost:8000/admin/`.
+
+### Creating Django Admin User
+1. navigate to the eth_transactions directory containing Makefile
+2. run the super_user command
+    ```bash
+    make super_user
+    ```
+3. enter the username, email and password as prompted
+3. login to django admin and view the Transactions model (should have no data)
 
 ### Loading the CSV
-1. navigate to the eth_transactions directory containing manage.py
-2. run the load_csv management command
+1. navigate to the eth_transactions directory containing Makefile
+2. run the load_csv command
     ```bash
-    python manage.py load_csv /path/to/your/csv
+    make load_csv
     ```
+
+### CRUD with Django Admin
+1. login to Django Admin, view the Transactions model
 
 ### Stopping the Application
 
